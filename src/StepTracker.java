@@ -4,6 +4,7 @@ import java.util.Scanner;
 class StepTracker {
     private Scanner scanner;
     private MonthData[] monthToData = new MonthData[12];
+    private Converter converter = new Converter(); // Поле для хранения экземпляра Converter
     private int goalByStepsPerDay = 10000; // Значение цели по умолчанию
     int getStepGoal() {
         return goalByStepsPerDay;
@@ -59,7 +60,7 @@ class StepTracker {
     }
 
 
-    private Converter converter = new Converter(); // Поле для хранения экземпляра Converter
+
 
     // Метод для вывода статистики
     void printStatistic() {
